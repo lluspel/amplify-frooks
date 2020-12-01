@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="main">
+    <h1>{{ tittle }}</h1>
+    <div class="form-row">
+        <label for="">Título</label>
+        <input type="text" placeholder="{{ book.bookName }}">
+    </div>
+    <div class="form-row">
+        <label for="">Descripción</label>
+        <textarea name="" id="">{{ book.description }}</textarea>
+    </div>
+    <div class="form-row">
+        <label for="">Documento</label>
+        <input type="file" name="archivosubido">
+    </div>
+    <div class="form-row">
+        <label for="">Imagen</label>
+        <input type="file" name="archivosubido">
+    </div>
+    <footer class="form-footer">
+        <a (click)="isOn= true" class="-exit">Volver</a>
+        <div class="form-footer-buttons">
+            <a (click)="delete()" class="-eliminar">Eliminar</a>
+            <a (click)="save()" class="-save">Guardar</a>
+        </div>
+    </footer>
+</div>
+<div [hidden]="!isOn">
+    <article class="card" id="card">
+        <div class="card-text">
+            <h2>Eliminar documento</h2>
+            <p>¿Estás seguro de querer eliminar el documento?</p>
+        </div>
+        <footer class="card-footer">
+            <a class="-exit" (click)="isOn= false">Cancelar</a>
+            <a class="-delete" (click)="cancel()">Eliminar</a>
+        </footer>       
+    </article>
+    
+    <div id="overlay"></div>
+</div>

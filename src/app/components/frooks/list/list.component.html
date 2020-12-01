@@ -1,0 +1,6 @@
+<app-header></app-header>
+<ul class="container-book" id="container-book">
+    <li *ngFor="let item of data">
+        <app-book [bookId] = item.id></app-book>
+    </li>
+</ul>
