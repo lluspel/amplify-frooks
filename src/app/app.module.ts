@@ -9,6 +9,13 @@ import { BookComponent } from './components/frooks/list/book.component';
 import { FrooksComponent } from './components/frooks/frooks.component';
 import { FormComponent } from './components/frooks/form/form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import { FormsModule } from '@angular/forms';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+
+/* Configure Amplify resources */
+Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [
@@ -17,12 +24,14 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     BookComponent,
     FrooksComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AmplifyUIAngularModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { API } from 'aws-amplify';
 import { BooksService } from 'src/app/books.service';
 
 @Component({
@@ -13,8 +14,11 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.booksData.getBooks().subscribe((result) => {
-      this.data = result;
-    });
+    this.fetchBooks();
+  }
+
+  async fetchBooks() {
+    const allBooksData = await API.get('bookapi', '/items', {});
+    this.data = allBooksData.data.Items;
   }
 }

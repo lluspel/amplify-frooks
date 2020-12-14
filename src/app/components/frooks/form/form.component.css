@@ -43,11 +43,14 @@
     width: 100%;
 }
 
+.form-footer a{
+    cursor: pointer;
+}
+
 .form-footer-buttons{
     margin-right: 0;
     margin-left: auto;
 }
-
 
 .form-footer-buttons a{
     padding: 4px 8px;

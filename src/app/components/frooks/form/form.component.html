@@ -1,30 +1,37 @@
 <app-header></app-header>
 <div class="main">
     <h1>{{ tittle }}</h1>
+
     <div class="form-row">
         <label for="">Título</label>
-        <input type="text" placeholder="{{ book.bookName }}">
+        <input type="text" name="book-name" id="book-name" [(ngModel)]="book.bookName" required>
     </div>
     <div class="form-row">
         <label for="">Descripción</label>
-        <textarea name="" id="">{{ book.description }}</textarea>
+        <textarea name="book-description" id="book-description" [(ngModel)]="book.description" required></textarea>
     </div>
+
+    <!--
     <div class="form-row">
         <label for="">Documento</label>
-        <input type="file" name="archivosubido">
+        <input type="file"  name="book-book" id="book-book">
     </div>
+    -->
+
     <div class="form-row">
         <label for="">Imagen</label>
-        <input type="file" name="archivosubido">
+        <input type="file" (change)="handleFileInput($event.target.files)" accept="image/x-png,image/gif,image/jpeg" required>
     </div>
+
     <footer class="form-footer">
         <a (click)="isOn= true" class="-exit">Volver</a>
         <div class="form-footer-buttons">
-            <a (click)="delete()" class="-eliminar">Eliminar</a>
+            <a [hidden]="isNew" (click)="delete()" class="-eliminar">Eliminar</a>
             <a (click)="save()" class="-save">Guardar</a>
         </div>
     </footer>
 </div>
+
 <div [hidden]="!isOn">
     <article class="card" id="card">
         <div class="card-text">
