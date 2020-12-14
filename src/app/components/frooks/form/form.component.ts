@@ -83,10 +83,9 @@ export class FormComponent implements OnInit {
   }
 
   deleteImage(path: string): void {
-    // Storage.remove(path)
-    // .then(result => console.log(result))
-    // .catch(err => console.log(err));
-    console.log(path);
+    Storage.remove(path)
+    .then(result => console.log(result))
+    .catch(err => console.log(err));
   }
 
   async deleteBook(): Promise<void> {
@@ -99,7 +98,8 @@ export class FormComponent implements OnInit {
         book: this.book.image,
       }
     };
-    return await API.del('bookapi', '/items', data);
+    const apiData = await API.del('bookapi', '/items', data);
+    console.log(apiData);
   }
 
   cancel(): void{

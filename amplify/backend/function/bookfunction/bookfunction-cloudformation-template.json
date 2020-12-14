@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-amplifyfrooks-dev-102053-deployment",
-          "S3Key": "amplify-builds/bookfunction-727957712f314d6d5434-build.zip"
+          "S3Key": "amplify-builds/bookfunction-73464974466e76475634-build.zip"
         }
       }
     },

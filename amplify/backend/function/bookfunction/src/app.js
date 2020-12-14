@@ -64,25 +64,22 @@ app.post('/items', function (req, res) {
   }
   docClient.put(params, function (err, data) {
     if (err) res.json({err})
-    else res.json({success: 'Contact created successfully!'})
+    else res.json({success: 'Book created successfully!'})
   })
 });
 
 app.delete('/items', function(req, res) {
   var params = {
-    TableName: 'books-' + process.env.ENV,
-    Item: {
-      id: req.body.id,
-      bookName: req.body.bookName,
-      description: req.body.description,
-      image: req.body.image,
-      book: req.body.book,
+    TableName : 'books-' + process.env.ENV,
+    Key: {
+      id: req.body.id
     }
-  }
-  docClient.del(params, function (err, data) {
+  };
+
+  docClient.delete(params, function(err, data) {
     if (err) res.json({err})
-    else res.json({success: 'Contact deleted successfully!'})
-  })
+    else res.json({success: 'Deleted successfully!'})
+  });
 });
 
 app.listen(3000, function () {
