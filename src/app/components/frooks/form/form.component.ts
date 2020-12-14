@@ -1,4 +1,3 @@
-import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { API, Storage } from 'aws-amplify';
