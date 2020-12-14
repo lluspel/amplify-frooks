@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
     id: '0',
     bookName: 'Name of the book',
     description: 'Description',
-    image: 'image.png',
+    image: '',
   };
 
   idBook: string;
@@ -52,9 +52,11 @@ export class FormComponent implements OnInit {
       contentType: 'image/png'
     })
     .then((result: any) => {
+      if (this.book.image != '')  this.deleteImage(this.book.image);
       this.book.image = result.key;
     })
     .catch(err => console.log(err));
+
   }
 
   save(): void{
