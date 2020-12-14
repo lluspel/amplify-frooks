@@ -22,4 +22,6 @@ a {
 :root {
     --amplify-primary-color: #0078CE;
     --amplify-font-family: 'Work Sans', sans-serif;
+    --amplify-primary-tint: #0078CE;
+    --amplify-primary-shade: #0078CE;
 }

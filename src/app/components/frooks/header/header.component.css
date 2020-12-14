@@ -5,11 +5,13 @@ header{
     height: 139px;
     width: 100%;
 }
+a{
+    cursor: pointer;
+}
 
 .header-div{
     display: flex;
     align-items: center;
-    cursor: pointer;
     text-decoration: none;
     outline: none;
     color: black;
@@ -28,10 +30,11 @@ header{
     margin-right: 38px;
 }
 
-.header-button .-button{
+.header-button .-add{
     font-size: 22px;
     padding: 6px 25px;
     width: 117px;
+    width: auto;
     background-color: #0078CE;
     color: #fff;
     border: 0;
@@ -41,8 +44,4 @@ header{
     text-decoration: none;
     display: inline-block;
     margin: 0px 39px;
-}
-
-amplify-sign-out {
-    
 }

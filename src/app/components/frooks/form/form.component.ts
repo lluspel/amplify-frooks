@@ -1,8 +1,6 @@
 import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-import { BooksService } from 'src/app/books.service';
-import {Book} from '../book';
 import { API, Storage } from 'aws-amplify';
 
 @Component({
@@ -24,7 +22,6 @@ export class FormComponent implements OnInit {
   isNew = true;
 
   constructor(
-    private booksData: BooksService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -44,7 +41,7 @@ export class FormComponent implements OnInit {
     this.book = bookData.data.Item;
     this.isNew = false;
     this.tittle = 'Editar';
-}
+  }
 
   id(): any{
     return Math.random().toString(36).substring(2) + Date.now().toString(36);
@@ -80,8 +77,16 @@ export class FormComponent implements OnInit {
   }
 
   delete(): void{
+    this.deleteImage(this.book.image);
     this.deleteBook();
     this.router.navigate(['']);
+  }
+
+  deleteImage(path: string): void {
+    // Storage.remove(path)
+    // .then(result => console.log(result))
+    // .catch(err => console.log(err));
+    console.log(path);
   }
 
   async deleteBook(): Promise<void> {
@@ -95,12 +100,6 @@ export class FormComponent implements OnInit {
       }
     };
     return await API.del('bookapi', '/items', data);
-  }
-
-  exit(): void{
-    this.booksData.deleteBook(this.idBook).subscribe((result) => {});
-    alert('deleted');
-    this.router.navigate(['']);
   }
 
   cancel(): void{
