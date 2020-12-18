@@ -14,15 +14,9 @@ Setup
 - Crear las cuentas necesarias y los proyectos en Figma, Amplify, Glitch, Github
 - Crear tareas en el tablón de Github
 
+## AWS / Amplify (back-side)
+Investigar y crear los servicios de terceros (AWS / Amplify) para implementar soluciones que
+nos permitan autenticación, subida de ficheros, alojamiento de estáticos, etc.
 
-## Angular (front-side) - 1ª parte
-Faltan zips con las semillas
-Comenzar proyecto usando la semilla del squad de Angular. 
-Crearemos un módulo del nuevo proyecto. Integraremos la maqueta previamente desarrollada. Definiremos en el router las diferentes pantallas.
-
-## Mock (front-side)
-Glitch: crear
-Trabajaremos en un servidor sencillo alojado en Glitch que nos proporcione un api rest con los datos necesarios mockeados.
-
-## Angular (front-side) - 2ª parte
-Crearemos los servicios necesarios para poder integrar los datos proporcionados en el mock en un nuestra app de Angular.
+## Angular (front-side) - 3a parte
+Integrar en Angular los servicios de AWS / Amplify
