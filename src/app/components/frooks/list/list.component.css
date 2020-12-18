@@ -1,0 +1,39 @@
+.container-book {
+    width: 100%;
+
+}
+
+ul.container-book {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+}
+
+app-book {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #F8FAFB;
+}
+
+img{
+  min-width: 110px;
+  margin-right:32px;
+  align-self: start;
+}
+
+a {
+  margin-left:32px;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.description h2 {
+  font-size: 33px;
+  line-height: 40px;
+  margin: 0px 0px 12px 0px;
+}

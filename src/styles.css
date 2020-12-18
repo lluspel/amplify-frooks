@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0;
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: #0078CE;
+}
+:root {
+    --amplify-primary-color: #0078CE;
+    --amplify-font-family: 'Work Sans', sans-serif;
+    --amplify-primary-tint: #0078CE;
+    --amplify-primary-shade: #0078CE;
+}

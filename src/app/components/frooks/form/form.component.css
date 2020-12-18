@@ -1,0 +1,137 @@
+
+.main{
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 185px;
+    margin-right: 312px;
+}
+
+.main h1{
+    font-size: 72px;
+    color: #324552;
+    margin: 20px 0;
+}
+
+.form-row {
+    margin-top: 9px ;
+}
+
+.form-row label{
+    display: block;
+    height: 32px;
+}
+
+.form-row input[type=text]{
+    border: 1px solid #cbcfd2;
+    border-radius: 2px;
+    height: 38px;
+    padding: 0 8px;
+    width: 50%;
+}
+
+.form-row textarea{
+    border: 1px solid #cbcfd2;
+    border-radius: 2px;
+    padding: 0 8px;
+    height: 219px;
+    width: 100%;
+}
+
+.form-footer{
+    margin-top: 90px;
+    display: flex;
+    width: 100%;
+}
+
+.form-footer a{
+    cursor: pointer;
+}
+
+.form-footer-buttons{
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.form-footer-buttons a{
+    padding: 4px 8px;
+    width: 117px;
+    height: 37px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    background: #DC3545;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.form-footer-buttons a.-save{
+    background: #0078CE;
+    margin-left: 32px;
+}
+
+.card{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 37px;
+    width: 770px;
+    height: 445px;
+    color: #324552;
+    padding: 36px;
+}
+
+.card-text{
+    margin-bottom: 170px;
+}
+
+.card-text h2{
+    margin-left: 49px;
+    font-size: 37px;
+}
+
+.card-text p{
+    font-size: 25px;
+}
+
+.card-footer{
+    display: flex;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.card-footer a{
+    font-size: 15px;
+    padding: 0 36px;
+    font-size: 25px;
+    border-radius: 8px;
+    line-height: 56px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #fff;
+    color: #526570;
+    border: 2px solid #0078CE;
+}
+
+.card-footer a.-delete{
+    background-color: #0078CE;
+    color: #fff;
+    border: 0;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .5);
+    pointer-events: none;
+}
