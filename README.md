@@ -1,4 +1,4 @@
-# frooks-maquetacion
+# frooks-amplify
 
 ## Objetivo del proyecto
 Desarrollar una aplicación sencilla de gestión de enlaces a documentos (por ejemplo de libros gratuitos front, o pdfs de artículos). Nombre del proyecto: frooks
